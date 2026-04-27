@@ -1,6 +1,7 @@
 .env
 *.json
 !package.json
+**/credentials/
 
 __pycache__/
 *.py[cod]
@@ -19,6 +20,7 @@ terraform/*.tfvars
 
 airflow/logs/
 airflow/plugins/
+airflow/config/
 
 .DS_Store
 Thumbs.db
