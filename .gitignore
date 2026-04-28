@@ -7,10 +7,12 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 .venv/
+.envrc
 
-dbt/target/
-dbt/logs/
-dbt/.user.yml
+dbt/**/target/
+dbt/**/logs/
+dbt/**/dbt_packages/
+dbt/**/.user.yml
 dbt/profiles.yml
 
 terraform/.terraform/

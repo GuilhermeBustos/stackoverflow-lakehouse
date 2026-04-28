@@ -1,0 +1,134 @@
+version: 2
+
+sources:
+  - name: stackoverflow_raw
+    database: "{{ env_var('GCP_PROJECT_ID') }}"
+    schema: stackoverflow_raw
+    tables:
+      - name: posts_answers
+        columns:
+          - name: id
+            data_type: int64
+          - name: title
+            data_type: string
+          - name: body
+            data_type: string
+          - name: accepted_answer_id
+            data_type: string
+          - name: answer_count
+            data_type: string
+          - name: comment_count
+            data_type: int64
+          - name: community_owned_date
+            data_type: timestamp
+          - name: creation_date
+            data_type: timestamp
+          - name: favorite_count
+            data_type: string
+          - name: last_activity_date
+            data_type: timestamp
+          - name: last_edit_date
+            data_type: timestamp
+          - name: last_editor_display_name
+            data_type: string
+          - name: last_editor_user_id
+            data_type: int64
+          - name: owner_display_name
+            data_type: string
+          - name: owner_user_id
+            data_type: int64
+          - name: parent_id
+            data_type: int64
+          - name: post_type_id
+            data_type: int64
+          - name: score
+            data_type: int64
+          - name: tags
+            data_type: string
+          - name: view_count
+            data_type: string
+
+      - name: posts_questions
+        columns:
+          - name: id
+            data_type: int64
+          - name: title
+            data_type: string
+          - name: body
+            data_type: string
+          - name: accepted_answer_id
+            data_type: int64
+          - name: answer_count
+            data_type: int64
+          - name: comment_count
+            data_type: int64
+          - name: community_owned_date
+            data_type: timestamp
+          - name: creation_date
+            data_type: timestamp
+          - name: favorite_count
+            data_type: int64
+          - name: last_activity_date
+            data_type: timestamp
+          - name: last_edit_date
+            data_type: timestamp
+          - name: last_editor_display_name
+            data_type: string
+          - name: last_editor_user_id
+            data_type: int64
+          - name: owner_display_name
+            data_type: string
+          - name: owner_user_id
+            data_type: int64
+          - name: parent_id
+            data_type: string
+          - name: post_type_id
+            data_type: int64
+          - name: score
+            data_type: int64
+          - name: tags
+            data_type: string
+          - name: view_count
+            data_type: int64
+
+      - name: tags
+        columns:
+          - name: id
+            data_type: int64
+          - name: tag_name
+            data_type: string
+          - name: count
+            data_type: int64
+          - name: excerpt_post_id
+            data_type: int64
+          - name: wiki_post_id
+            data_type: int64
+
+      - name: users
+        columns:
+          - name: id
+            data_type: int64
+          - name: display_name
+            data_type: string
+          - name: about_me
+            data_type: string
+          - name: age
+            data_type: string
+          - name: creation_date
+            data_type: timestamp
+          - name: last_access_date
+            data_type: timestamp
+          - name: location
+            data_type: string
+          - name: reputation
+            data_type: int64
+          - name: up_votes
+            data_type: int64
+          - name: down_votes
+            data_type: int64
+          - name: views
+            data_type: int64
+          - name: profile_image_url
+            data_type: string
+          - name: website_url
+            data_type: string
